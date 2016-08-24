@@ -6,11 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <%= yield %>
-    <div></div> 
-    <%= debug(params) if Rails.env.development? %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
+
 </html>
