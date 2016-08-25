@@ -5,6 +5,24 @@
 
 $gray-medium-light: #eaeaea;
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+$gray-medium-light: #eaeaea;
+
 /* universal */
 
 body {
@@ -96,6 +114,7 @@ footer {
     }
   @include box_sizing;
 }
+}
 
 /* sidebar */
 
@@ -159,6 +178,5 @@ input {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
->>>>>>> b8295bbbcb1729e994e9f2560ec195185d3975a4
   }
 }
