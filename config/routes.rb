@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'static_pages/help'
 
   resources :users
+  
   post '/signup',  to: 'users#create'
   root 'application#hello'
   get    '/help',    to: 'static_pages#help'
