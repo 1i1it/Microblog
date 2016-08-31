@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
         flash[:warning] = message
         redirect_to root_url
       end
+    end
   end
 
   def destroy

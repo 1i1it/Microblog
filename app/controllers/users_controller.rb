@@ -8,12 +8,15 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     #@users = User.all
-    @users = User.paginate(page: params[:page])
+    #@users = User.paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
+    redirect_to root_url and return unless @user.activated
   end
 
   # GET /users/new
