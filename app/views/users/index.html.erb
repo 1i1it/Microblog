@@ -4,12 +4,14 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <% @users.each do |user| %>
+  <%= render @users %>
+<!--   <% @users.each do |user| %>
     <li>
+      
       <%= gravatar_for user, size: 50 %>
-      <%= link_to user.name, user %>
+      <%= link_to user.name, user %> 
     </li>
-  <% end %>
+  <% end %> -->
 </ul>
 
 <%= will_paginate %>
