@@ -4,6 +4,8 @@ class PasswordResetsController < ApplicationController
   before_action :check_expiration, only: [:edit, :update]    # Case (1)
 
   def new
+    byebug
+    x=1
   end
 
   def create

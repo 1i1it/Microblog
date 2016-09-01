@@ -14,6 +14,7 @@ gem 'jbuilder',     '2.4.1'
 gem 'faker',        '1.6.3'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
+gem 'pry-byebug',           '2.0.0' # binding.pry for breakpoints
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
